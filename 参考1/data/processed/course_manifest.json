@@ -1,0 +1,265 @@
+[
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "强化学习与对齐",
+    "source_file": "advanced-reinforcement-learning.md",
+    "title": "高级强化学习技术",
+    "estimated_level": "advanced",
+    "tags": [
+      "advanced",
+      "learning",
+      "reinforcement",
+      "reinforcement-learning",
+      "rl",
+      "对齐",
+      "强化学习"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "计算机视觉与图学习",
+    "source_file": "cnns-for-computer-vision.md",
+    "title": "计算机视觉应用中的高级卷积神经网络",
+    "estimated_level": "intermediate",
+    "tags": [
+      "cnn",
+      "cnns",
+      "computer",
+      "computer-vision",
+      "for",
+      "vision",
+      "图学习",
+      "计算机视觉"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "编程与工程基础",
+    "source_file": "essential-numpy-pandas.md",
+    "title": "NumPy 和 Pandas 基本功",
+    "estimated_level": "beginner",
+    "tags": [
+      "data",
+      "essential",
+      "numpy",
+      "pandas",
+      "工程基础",
+      "编程"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "Transformer 与大语言模型",
+    "source_file": "foundations-transformers-architecture.md",
+    "title": "高级Transformer架构",
+    "estimated_level": "intermediate",
+    "tags": [
+      "architecture",
+      "attention",
+      "foundations",
+      "llm",
+      "transformer",
+      "transformers",
+      "大语言模型"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "编程与工程基础",
+    "source_file": "getting-started-with-git.md",
+    "title": "Git 入门",
+    "estimated_level": "beginner",
+    "tags": [
+      "engineering",
+      "getting",
+      "git",
+      "started",
+      "with",
+      "工程基础",
+      "编程"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "机器学习与深度学习基础",
+    "source_file": "getting-started-with-pytorch.md",
+    "title": "PyTorch入门",
+    "estimated_level": "beginner",
+    "tags": [
+      "deep-learning",
+      "getting",
+      "pytorch",
+      "started",
+      "with",
+      "机器学习",
+      "深度学习基础"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "Transformer 与大语言模型",
+    "source_file": "how-to-build-a-large-language-model.md",
+    "title": "如何构建大语言模型",
+    "estimated_level": "intermediate",
+    "tags": [
+      "a",
+      "build",
+      "how",
+      "language",
+      "large",
+      "large-language-model",
+      "llm",
+      "model",
+      "to",
+      "transformer",
+      "大语言模型"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "LLM 应用开发与智能体",
+    "source_file": "intro-llm-agents.md",
+    "title": "LLM智能体入门",
+    "estimated_level": "intermediate",
+    "tags": [
+      "agent",
+      "agents",
+      "intro",
+      "llm",
+      "llm-agent",
+      "tool-use",
+      "应用开发",
+      "智能体"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "计算机视觉与图学习",
+    "source_file": "introduction-to-computer-vision.md",
+    "title": "计算机视觉导论",
+    "estimated_level": "intermediate",
+    "tags": [
+      "computer",
+      "computer-vision",
+      "cv",
+      "introduction",
+      "to",
+      "vision",
+      "图学习",
+      "计算机视觉"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "计算机视觉与图学习",
+    "source_file": "introduction-to-graph-neural-networks.md",
+    "title": "图神经网络入门",
+    "estimated_level": "intermediate",
+    "tags": [
+      "gnn",
+      "graph",
+      "introduction",
+      "networks",
+      "neural",
+      "to",
+      "图学习",
+      "计算机视觉"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "机器学习与深度学习基础",
+    "source_file": "introduction-to-machine-learning.md",
+    "title": "机器学习入门",
+    "estimated_level": "beginner",
+    "tags": [
+      "introduction",
+      "learning",
+      "machine",
+      "machine-learning",
+      "ml",
+      "to",
+      "机器学习",
+      "深度学习基础"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "机器学习与深度学习基础",
+    "source_file": "introduction-to-neural-networks.md",
+    "title": "神经网络入门",
+    "estimated_level": "beginner",
+    "tags": [
+      "deep-learning",
+      "introduction",
+      "networks",
+      "neural",
+      "neural-network",
+      "to",
+      "机器学习",
+      "深度学习基础"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "LLM 应用开发与智能体",
+    "source_file": "langchain-production-llm.md",
+    "title": "LangChain：打造生产级大语言模型应用",
+    "estimated_level": "intermediate",
+    "tags": [
+      "langchain",
+      "llm",
+      "llmops",
+      "production",
+      "应用开发",
+      "智能体"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "编程与工程基础",
+    "source_file": "python_for_beginners.md",
+    "title": "Python 编程入门 · 完整课程",
+    "estimated_level": "beginner",
+    "tags": [
+      "beginners",
+      "for",
+      "programming",
+      "python",
+      "工程基础",
+      "编程"
+    ]
+  },
+  {
+    "course_id": "ai-large-model-app-dev-practice",
+    "course_name": "人工智能与大模型应用开发实践",
+    "module_name": "强化学习与对齐",
+    "source_file": "rlhf-reinforcement-learning-human-feedback.md",
+    "title": "强化学习与人类反馈 (RLHF)",
+    "estimated_level": "advanced",
+    "tags": [
+      "alignment",
+      "feedback",
+      "human",
+      "learning",
+      "reinforcement",
+      "rlhf",
+      "对齐",
+      "强化学习"
+    ]
+  }
+]

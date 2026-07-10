@@ -1,0 +1,14 @@
+{
+  "zip_path": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\raw\\knowledge.zip",
+  "raw_dir": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\sample_course\\raw",
+  "processed_dir": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed",
+  "document_count": 15,
+  "chunk_count": 7682,
+  "manifest_path": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\course_manifest.json",
+  "chunks_path": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\chunks.jsonl",
+  "raptor_tree_path": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\raptor_tree.json",
+  "index_dir": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\faiss_index",
+  "vector_backend": "fallback",
+  "retrieval_backend": "fallback",
+  "active_index_source": "knowledge.zip"
+}

@@ -1,0 +1,482 @@
+{
+  "catalogId": "ai-major-course-group",
+  "catalogName": "高校人工智能专业能力进阶课程群",
+  "description": "面向高校人工智能、计算机科学与软件工程相关专业的课程知识库，覆盖 Git、Python、机器学习、深度学习、PyTorch、强化学习、大语言模型、RAG、LangChain 和 AI Agent 等课程。",
+  "version": "2026.05.cleaned",
+  "primaryDemoCourses": [
+    "RAG 检索增强生成",
+    "RAG 与 LangChain 应用开发",
+    "AI Agent 与多智能体系统"
+  ],
+  "courses": [
+    {
+      "id": "git",
+      "name": "Git 与工程协作",
+      "file": "getting-started-with-git.md",
+      "level": "基础工具层",
+      "description": "学习版本控制、分支协作、远程仓库与 AI 项目实验复现。",
+      "concepts": [
+        "版本控制",
+        "分支管理",
+        "Commit",
+        "合并冲突",
+        "远程仓库",
+        "GitHub 协作",
+        "实验复现"
+      ],
+      "prerequisites": [],
+      "nextCourses": [
+        "Python 程序设计"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "命令练习",
+        "项目协作任务",
+        "测验"
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python 程序设计",
+      "file": "python_for_beginners.md",
+      "level": "编程基础层",
+      "description": "掌握 AI 开发所需的 Python 基础语法、函数、数据结构、面向对象与文件处理。",
+      "concepts": [
+        "变量",
+        "控制流",
+        "函数",
+        "集合",
+        "面向对象",
+        "异常处理",
+        "文件操作"
+      ],
+      "prerequisites": [],
+      "nextCourses": [
+        "NumPy 与 Pandas 数据处理",
+        "机器学习"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "代码实验",
+        "测验",
+        "项目任务"
+      ]
+    },
+    {
+      "id": "numpy-pandas",
+      "name": "NumPy 与 Pandas 数据处理",
+      "file": "essential-numpy-pandas.md",
+      "level": "数据处理基础层",
+      "description": "学习 AI 实验常用的数据表示、数组计算、表格处理和基础数据分析。",
+      "concepts": [
+        "NumPy 数组",
+        "向量化计算",
+        "Pandas DataFrame",
+        "数据清洗",
+        "索引",
+        "聚合统计"
+      ],
+      "prerequisites": [
+        "Python 程序设计"
+      ],
+      "nextCourses": [
+        "机器学习",
+        "PyTorch 深度学习实践"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "代码实验",
+        "数据分析练习",
+        "测验"
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "name": "机器学习",
+      "file": "introduction-to-machine-learning.md",
+      "level": "机器学习核心层",
+      "description": "理解监督学习、无监督学习、模型评估、特征工程与机器学习基本流程。",
+      "concepts": [
+        "监督学习",
+        "无监督学习",
+        "回归",
+        "分类",
+        "聚类",
+        "特征工程",
+        "模型评估"
+      ],
+      "prerequisites": [
+        "Python 程序设计",
+        "NumPy 与 Pandas 数据处理"
+      ],
+      "nextCourses": [
+        "神经网络与深度学习",
+        "PyTorch 深度学习实践"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "案例分析",
+        "测验",
+        "实验任务"
+      ]
+    },
+    {
+      "id": "neural-networks",
+      "name": "神经网络与深度学习",
+      "file": "introduction-to-neural-networks.md",
+      "level": "深度学习核心层",
+      "description": "学习人工神经网络、前向传播、反向传播、激活函数、损失函数与优化。",
+      "concepts": [
+        "神经元",
+        "前向传播",
+        "反向传播",
+        "激活函数",
+        "损失函数",
+        "梯度下降",
+        "正则化"
+      ],
+      "prerequisites": [
+        "机器学习"
+      ],
+      "nextCourses": [
+        "PyTorch 深度学习实践",
+        "Transformer 架构基础",
+        "计算机视觉与 CNN"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "推导白板",
+        "测验",
+        "代码实验"
+      ]
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch 深度学习实践",
+      "file": "getting-started-with-pytorch.md",
+      "level": "深度学习实践层",
+      "description": "使用 PyTorch 完成模型构建、训练、调试、评估和实验复现。",
+      "concepts": [
+        "Tensor",
+        "Autograd",
+        "nn.Module",
+        "Dataset",
+        "DataLoader",
+        "训练循环",
+        "模型保存"
+      ],
+      "prerequisites": [
+        "Python 程序设计",
+        "神经网络与深度学习"
+      ],
+      "nextCourses": [
+        "大语言模型基础",
+        "计算机视觉与 CNN"
+      ],
+      "resourceTypes": [
+        "代码实验",
+        "讲解文档",
+        "项目任务",
+        "测验"
+      ]
+    },
+    {
+      "id": "computer-vision",
+      "name": "计算机视觉基础",
+      "file": "introduction-to-computer-vision.md",
+      "level": "视觉智能专题层",
+      "description": "理解图像表示、视觉任务、特征提取、分类、检测和分割等基础概念。",
+      "concepts": [
+        "图像表示",
+        "分类",
+        "检测",
+        "分割",
+        "特征提取",
+        "数据增强"
+      ],
+      "prerequisites": [
+        "Python 程序设计",
+        "机器学习"
+      ],
+      "nextCourses": [
+        "计算机视觉与 CNN"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "图解资源",
+        "测验",
+        "案例任务"
+      ]
+    },
+    {
+      "id": "cnn",
+      "name": "计算机视觉与 CNN",
+      "file": "cnns-for-computer-vision.md",
+      "level": "视觉智能专题层",
+      "description": "学习卷积神经网络的卷积、池化、特征图、经典网络和视觉模型训练。",
+      "concepts": [
+        "卷积",
+        "池化",
+        "特征图",
+        "CNN",
+        "迁移学习",
+        "图像分类"
+      ],
+      "prerequisites": [
+        "神经网络与深度学习",
+        "PyTorch 深度学习实践"
+      ],
+      "nextCourses": [
+        "Transformer 架构基础"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "代码实验",
+        "视觉案例",
+        "测验"
+      ]
+    },
+    {
+      "id": "transformer",
+      "name": "Transformer 架构基础",
+      "file": "foundations-transformers-architecture.md",
+      "level": "高级模型层",
+      "description": "学习注意力机制、自注意力、位置编码、编码器解码器结构和 Transformer 训练。",
+      "concepts": [
+        "注意力机制",
+        "Self-Attention",
+        "位置编码",
+        "Encoder",
+        "Decoder",
+        "Transformer"
+      ],
+      "prerequisites": [
+        "神经网络与深度学习",
+        "PyTorch 深度学习实践"
+      ],
+      "nextCourses": [
+        "大语言模型基础"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "推导白板",
+        "测验",
+        "代码实验"
+      ]
+    },
+    {
+      "id": "llm",
+      "name": "大语言模型基础",
+      "file": "how-to-build-a-large-language-model.md",
+      "level": "高级模型层",
+      "description": "学习语言模型、Tokenization、Transformer、预训练、微调、Prompt Engineering 与 LLM 应用基础。",
+      "concepts": [
+        "Token",
+        "Tokenizer",
+        "Transformer",
+        "预训练",
+        "微调",
+        "Prompt Engineering",
+        "上下文学习"
+      ],
+      "prerequisites": [
+        "Transformer 架构基础",
+        "PyTorch 深度学习实践"
+      ],
+      "nextCourses": [
+        "RAG 检索增强生成",
+        "RAG 与 LangChain 应用开发",
+        "AI Agent 与多智能体系统"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "测验",
+        "代码实验",
+        "项目任务"
+      ]
+    },
+    {
+      "id": "rag",
+      "name": "RAG 检索增强生成",
+      "file": "rag-retrieval-augmented-generation.md",
+      "level": "LLM 应用层",
+      "description": "学习文档切分、Embedding、向量数据库、Retriever、Grounding、防幻觉和 RAG 系统评测。",
+      "concepts": [
+        "Chunking",
+        "Embedding",
+        "Vector DB",
+        "Retriever",
+        "Generator",
+        "Grounding",
+        "防幻觉",
+        "RAG 评测"
+      ],
+      "prerequisites": [
+        "Python 程序设计",
+        "大语言模型基础"
+      ],
+      "nextCourses": [
+        "RAG 与 LangChain 应用开发",
+        "AI Agent 与多智能体系统"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "思维导图",
+        "代码实验",
+        "测验",
+        "项目任务"
+      ]
+    },
+    {
+      "id": "langchain",
+      "name": "RAG 与 LangChain 应用开发",
+      "file": "langchain-production-llm.md",
+      "level": "LLM 应用层",
+      "description": "学习 LCEL、Retriever、Memory、Tool、Callback、Observability 与生产级 LLM 应用架构。",
+      "concepts": [
+        "LCEL",
+        "Retriever",
+        "Memory",
+        "Tool",
+        "Callback",
+        "RAG",
+        "Observability"
+      ],
+      "prerequisites": [
+        "Python 程序设计",
+        "大语言模型基础",
+        "RAG 检索增强生成"
+      ],
+      "nextCourses": [
+        "AI Agent 与多智能体系统"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "代码实验",
+        "应用项目",
+        "测验"
+      ]
+    },
+    {
+      "id": "agent",
+      "name": "AI Agent 与多智能体系统",
+      "file": "intro-llm-agents.md",
+      "level": "智能体应用层",
+      "description": "学习 LLM Agent、工具调用、规划、记忆、反思、多智能体协作与教育智能体应用。",
+      "concepts": [
+        "Agent",
+        "Tool Calling",
+        "Planning",
+        "Memory",
+        "Reflection",
+        "Multi-Agent",
+        "Orchestration"
+      ],
+      "prerequisites": [
+        "大语言模型基础",
+        "RAG 与 LangChain 应用开发"
+      ],
+      "nextCourses": [],
+      "resourceTypes": [
+        "讲解文档",
+        "项目任务",
+        "多智能体案例",
+        "测验"
+      ]
+    },
+    {
+      "id": "reinforcement-learning",
+      "name": "强化学习",
+      "file": "advanced-reinforcement-learning.md",
+      "level": "智能决策专题层",
+      "description": "学习 MDP、价值函数、Q-learning、DQN、策略梯度与 Actor-Critic 等强化学习方法。",
+      "concepts": [
+        "MDP",
+        "价值函数",
+        "Q-learning",
+        "DQN",
+        "Policy Gradient",
+        "Actor-Critic"
+      ],
+      "prerequisites": [
+        "机器学习",
+        "神经网络与深度学习"
+      ],
+      "nextCourses": [
+        "RLHF 人类反馈强化学习"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "公式推导",
+        "测验",
+        "实验任务"
+      ]
+    },
+    {
+      "id": "rlhf",
+      "name": "RLHF 人类反馈强化学习",
+      "file": "rlhf-reinforcement-learning-human-feedback.md",
+      "level": "LLM 对齐专题层",
+      "description": "学习人类反馈强化学习、奖励模型、偏好学习、PPO 与大模型对齐流程。",
+      "concepts": [
+        "AI 对齐",
+        "偏好数据",
+        "奖励模型",
+        "PPO",
+        "RLHF",
+        "安全对齐"
+      ],
+      "prerequisites": [
+        "强化学习",
+        "大语言模型基础"
+      ],
+      "nextCourses": [
+        "AI Agent 与多智能体系统"
+      ],
+      "resourceTypes": [
+        "讲解文档",
+        "流程图",
+        "测验",
+        "案例分析"
+      ]
+    },
+    {
+      "id": "gnn",
+      "name": "图神经网络",
+      "file": "introduction-to-graph-neural-networks.md",
+      "level": "拓展前沿专题层",
+      "description": "学习图数据表示、消息传递、图卷积网络和图表示学习。",
+      "concepts": [
+        "图数据",
+        "节点表示",
+        "边表示",
+        "消息传递",
+        "GCN",
+        "图表示学习"
+      ],
+      "prerequisites": [
+        "机器学习",
+        "神经网络与深度学习"
+      ],
+      "nextCourses": [],
+      "resourceTypes": [
+        "讲解文档",
+        "图解资源",
+        "测验",
+        "案例任务"
+      ]
+    }
+  ],
+  "chunkMetadataSchema": [
+    "course_id",
+    "course_name",
+    "source_file",
+    "level",
+    "chapter",
+    "section",
+    "heading_path",
+    "chunk_index",
+    "text",
+    "token_count"
+  ]
+}

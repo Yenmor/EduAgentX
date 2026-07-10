@@ -1,0 +1,14 @@
+{
+  "sample_dir": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\sample_course",
+  "processed_dir": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\sample_index",
+  "document_count": 1,
+  "chunk_count": 9,
+  "manifest_path": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\sample_index\\course_manifest.json",
+  "chunks_path": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\sample_index\\chunks.jsonl",
+  "raptor_tree_path": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\sample_index\\raptor_tree.json",
+  "index_dir": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\sample_index\\faiss_index",
+  "vector_backend": "fallback",
+  "retrieval_backend": "fallback",
+  "active_index_source": "sample_course_demo",
+  "note": "Sample indexes are demo-only and do not replace data/processed/faiss_index."
+}

@@ -1,0 +1,6 @@
+{
+  "deprecated": true,
+  "message": "Sample demo indexes are now written to data/processed/sample_index and do not replace the active knowledge index.",
+  "active_index_source": "knowledge.zip",
+  "sample_index_summary": "C:\\Users\\17551\\Documents\\zqrjbproj\\ai-learning-platform\\data\\processed\\sample_index\\build_index_summary.json"
+}

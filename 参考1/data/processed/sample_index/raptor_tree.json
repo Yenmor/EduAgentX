@@ -1,0 +1,843 @@
+{
+  "schema_version": "raptor_v2",
+  "course_name": "LLM Agent Sample Course",
+  "course": {
+    "node_id": "course-root",
+    "type": "course",
+    "course_name": "LLM Agent Sample Course",
+    "summary": "Demo Sample: # 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。 ## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例.....",
+    "module_count": 1,
+    "chapter_count": 9,
+    "chunk_count": 9,
+    "child_ids": [
+      "module-001-demo-sample"
+    ]
+  },
+  "modules": [
+    {
+      "node_id": "module-001-demo-sample",
+      "type": "module",
+      "module_name": "Demo Sample",
+      "summary": "# 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。 ## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例.....",
+      "chapter_count": 9,
+      "chunk_count": 9,
+      "child_ids": [
+        "chapter-001-demo-sample",
+        "chapter-002-demo-sample-prompt-engineering",
+        "chapter-003-demo-sample-embedding",
+        "chapter-004-demo-sample-rag",
+        "chapter-005-demo-sample-function-calling",
+        "chapter-006-demo-sample-agent",
+        "chapter-007-demo-sample-langgraph",
+        "chapter-008-demo-sample",
+        "chapter-009-demo-sample"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "node_id": "chapter-001-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "大模型应用开发与智能体实践",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践"
+      ],
+      "summary": "# 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。",
+      "chunk_ids": [
+        "llm_agent_course-0001-6a410b9f16dd"
+      ],
+      "child_ids": [
+        "llm_agent_course-0001-6a410b9f16dd"
+      ]
+    },
+    {
+      "node_id": "chapter-002-demo-sample-prompt-engineering",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Prompt Engineering",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Prompt Engineering"
+      ],
+      "summary": "## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例...",
+      "chunk_ids": [
+        "llm_agent_course-0002-50dcfc53f4c3"
+      ],
+      "child_ids": [
+        "llm_agent_course-0002-50dcfc53f4c3"
+      ]
+    },
+    {
+      "node_id": "chapter-003-demo-sample-embedding",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Embedding 与向量检索",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Embedding 与向量检索"
+      ],
+      "summary": "## Embedding 与向量检索 Embedding 是把文本、代码或图片等对象映射为固定维度向量的过程。语义相近的内容在向量空间中距离更近，因此可以用相似度搜索找到与问题最相关的课程片段...",
+      "chunk_ids": [
+        "llm_agent_course-0003-1d33ef76c4e0"
+      ],
+      "child_ids": [
+        "llm_agent_course-0003-1d33ef76c4e0"
+      ]
+    },
+    {
+      "node_id": "chapter-004-demo-sample-rag",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "RAG 检索增强生成",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "RAG 检索增强生成"
+      ],
+      "summary": "## RAG 检索增强生成 RAG 是 Retrieval-Augmented Generation 的缩写，中文通常叫检索增强生成。它先从知识库中检索与用户问题相关的片段，再把这些片段作为上下文交给大模型生成答案。RAG 的核心价值是让回答更贴近课程资料，减少模型凭空编造...",
+      "chunk_ids": [
+        "llm_agent_course-0004-2ee05a8c888a"
+      ],
+      "child_ids": [
+        "llm_agent_course-0004-2ee05a8c888a"
+      ]
+    },
+    {
+      "node_id": "chapter-005-demo-sample-function-calling",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Function Calling",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Function Calling"
+      ],
+      "summary": "## Function Calling Function Calling 让大模型按照预定义 schema 选择并调用工具。模型不直接执行代码，而是输出函数名和参数；后端负责校验参数、执行函数并把结果返回给模型继续推理...",
+      "chunk_ids": [
+        "llm_agent_course-0005-9990131a015a"
+      ],
+      "child_ids": [
+        "llm_agent_course-0005-9990131a015a"
+      ]
+    },
+    {
+      "node_id": "chapter-006-demo-sample-agent",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Agent 与多智能体工作流",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Agent 与多智能体工作流"
+      ],
+      "summary": "## Agent 与多智能体工作流 Agent 是能根据目标规划步骤、调用工具、读取反馈并继续执行的智能模块。相比单轮问答，Agent 更强调状态、计划、工具使用和自我检查...",
+      "chunk_ids": [
+        "llm_agent_course-0006-979c957f2340"
+      ],
+      "child_ids": [
+        "llm_agent_course-0006-979c957f2340"
+      ]
+    },
+    {
+      "node_id": "chapter-007-demo-sample-langgraph",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "LangGraph 基础",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "LangGraph 基础"
+      ],
+      "summary": "## LangGraph 基础 LangGraph 是一种用于构建有状态 LLM 工作流的图式框架。它把应用表示为节点和边：节点执行具体逻辑，例如检索、生成或评估；边决定下一步走向，例如通过 Judge 后结束，不通过则回到生成节点修改...",
+      "chunk_ids": [
+        "llm_agent_course-0007-5f2e910ab3e5"
+      ],
+      "child_ids": [
+        "llm_agent_course-0007-5f2e910ab3e5"
+      ]
+    },
+    {
+      "node_id": "chapter-008-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "防幻觉与评估",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "防幻觉与评估"
+      ],
+      "summary": "## 防幻觉与评估 防幻觉的目标是减少模型生成没有依据、与课程资料冲突或超出能力边界的内容。常见方法包括强制引用检索片段、限制回答范围、使用 Judge Agent 打分、对关键事实做二次检索，以及在不确定时明确说明“不确定”。 评估可以分为检索评估和生成评估...",
+      "chunk_ids": [
+        "llm_agent_course-0008-45a4be89a1e3"
+      ],
+      "child_ids": [
+        "llm_agent_course-0008-45a4be89a1e3"
+      ]
+    },
+    {
+      "node_id": "chapter-009-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "大模型应用项目实践",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "大模型应用项目实践"
+      ],
+      "summary": "## 大模型应用项目实践 一个完整的大模型应用项目通常包括需求分析、数据准备、知识库构建、检索链路、工具调用、Agent 编排、前端交互、评估指标和部署监控。课程项目建议从一个小而闭环的场景开始，例如“课程答疑 + 个性化学习路径”...",
+      "chunk_ids": [
+        "llm_agent_course-0009-1f94495ca113"
+      ],
+      "child_ids": [
+        "llm_agent_course-0009-1f94495ca113"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "node_id": "llm_agent_course-0001-6a410b9f16dd",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0001-6a410b9f16dd",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践"
+      ],
+      "summary": "# 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。",
+      "start_char": 0,
+      "end_char": 131
+    },
+    {
+      "node_id": "llm_agent_course-0002-50dcfc53f4c3",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0002-50dcfc53f4c3",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Prompt Engineering"
+      ],
+      "summary": "## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例...",
+      "start_char": 131,
+      "end_char": 468
+    },
+    {
+      "node_id": "llm_agent_course-0003-1d33ef76c4e0",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0003-1d33ef76c4e0",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Embedding 与向量检索"
+      ],
+      "summary": "## Embedding 与向量检索 Embedding 是把文本、代码或图片等对象映射为固定维度向量的过程。语义相近的内容在向量空间中距离更近，因此可以用相似度搜索找到与问题最相关的课程片段...",
+      "start_char": 468,
+      "end_char": 802
+    },
+    {
+      "node_id": "llm_agent_course-0004-2ee05a8c888a",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0004-2ee05a8c888a",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "RAG 检索增强生成"
+      ],
+      "summary": "## RAG 检索增强生成 RAG 是 Retrieval-Augmented Generation 的缩写，中文通常叫检索增强生成。它先从知识库中检索与用户问题相关的片段，再把这些片段作为上下文交给大模型生成答案。RAG 的核心价值是让回答更贴近课程资料，减少模型凭空编造...",
+      "start_char": 802,
+      "end_char": 1192
+    },
+    {
+      "node_id": "llm_agent_course-0005-9990131a015a",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0005-9990131a015a",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Function Calling"
+      ],
+      "summary": "## Function Calling Function Calling 让大模型按照预定义 schema 选择并调用工具。模型不直接执行代码，而是输出函数名和参数；后端负责校验参数、执行函数并把结果返回给模型继续推理...",
+      "start_char": 1192,
+      "end_char": 1501
+    },
+    {
+      "node_id": "llm_agent_course-0006-979c957f2340",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0006-979c957f2340",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Agent 与多智能体工作流"
+      ],
+      "summary": "## Agent 与多智能体工作流 Agent 是能根据目标规划步骤、调用工具、读取反馈并继续执行的智能模块。相比单轮问答，Agent 更强调状态、计划、工具使用和自我检查...",
+      "start_char": 1501,
+      "end_char": 1927
+    },
+    {
+      "node_id": "llm_agent_course-0007-5f2e910ab3e5",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0007-5f2e910ab3e5",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "LangGraph 基础"
+      ],
+      "summary": "## LangGraph 基础 LangGraph 是一种用于构建有状态 LLM 工作流的图式框架。它把应用表示为节点和边：节点执行具体逻辑，例如检索、生成或评估；边决定下一步走向，例如通过 Judge 后结束，不通过则回到生成节点修改...",
+      "start_char": 1927,
+      "end_char": 2295
+    },
+    {
+      "node_id": "llm_agent_course-0008-45a4be89a1e3",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0008-45a4be89a1e3",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "防幻觉与评估"
+      ],
+      "summary": "## 防幻觉与评估 防幻觉的目标是减少模型生成没有依据、与课程资料冲突或超出能力边界的内容。常见方法包括强制引用检索片段、限制回答范围、使用 Judge Agent 打分、对关键事实做二次检索，以及在不确定时明确说明“不确定”。 评估可以分为检索评估和生成评估...",
+      "start_char": 2295,
+      "end_char": 2597
+    },
+    {
+      "node_id": "llm_agent_course-0009-1f94495ca113",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0009-1f94495ca113",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "大模型应用项目实践"
+      ],
+      "summary": "## 大模型应用项目实践 一个完整的大模型应用项目通常包括需求分析、数据准备、知识库构建、检索链路、工具调用、Agent 编排、前端交互、评估指标和部署监控。课程项目建议从一个小而闭环的场景开始，例如“课程答疑 + 个性化学习路径”...",
+      "start_char": 2597,
+      "end_char": 2924
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "course-root",
+      "type": "course",
+      "course_name": "LLM Agent Sample Course",
+      "summary": "Demo Sample: # 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。 ## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例.....",
+      "module_count": 1,
+      "chapter_count": 9,
+      "chunk_count": 9,
+      "child_ids": [
+        "module-001-demo-sample"
+      ]
+    },
+    {
+      "node_id": "module-001-demo-sample",
+      "type": "module",
+      "module_name": "Demo Sample",
+      "summary": "# 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。 ## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例.....",
+      "chapter_count": 9,
+      "chunk_count": 9,
+      "child_ids": [
+        "chapter-001-demo-sample",
+        "chapter-002-demo-sample-prompt-engineering",
+        "chapter-003-demo-sample-embedding",
+        "chapter-004-demo-sample-rag",
+        "chapter-005-demo-sample-function-calling",
+        "chapter-006-demo-sample-agent",
+        "chapter-007-demo-sample-langgraph",
+        "chapter-008-demo-sample",
+        "chapter-009-demo-sample"
+      ]
+    },
+    {
+      "node_id": "chapter-001-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "大模型应用开发与智能体实践",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践"
+      ],
+      "summary": "# 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。",
+      "chunk_ids": [
+        "llm_agent_course-0001-6a410b9f16dd"
+      ],
+      "child_ids": [
+        "llm_agent_course-0001-6a410b9f16dd"
+      ]
+    },
+    {
+      "node_id": "chapter-002-demo-sample-prompt-engineering",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Prompt Engineering",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Prompt Engineering"
+      ],
+      "summary": "## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例...",
+      "chunk_ids": [
+        "llm_agent_course-0002-50dcfc53f4c3"
+      ],
+      "child_ids": [
+        "llm_agent_course-0002-50dcfc53f4c3"
+      ]
+    },
+    {
+      "node_id": "chapter-003-demo-sample-embedding",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Embedding 与向量检索",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Embedding 与向量检索"
+      ],
+      "summary": "## Embedding 与向量检索 Embedding 是把文本、代码或图片等对象映射为固定维度向量的过程。语义相近的内容在向量空间中距离更近，因此可以用相似度搜索找到与问题最相关的课程片段...",
+      "chunk_ids": [
+        "llm_agent_course-0003-1d33ef76c4e0"
+      ],
+      "child_ids": [
+        "llm_agent_course-0003-1d33ef76c4e0"
+      ]
+    },
+    {
+      "node_id": "chapter-004-demo-sample-rag",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "RAG 检索增强生成",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "RAG 检索增强生成"
+      ],
+      "summary": "## RAG 检索增强生成 RAG 是 Retrieval-Augmented Generation 的缩写，中文通常叫检索增强生成。它先从知识库中检索与用户问题相关的片段，再把这些片段作为上下文交给大模型生成答案。RAG 的核心价值是让回答更贴近课程资料，减少模型凭空编造...",
+      "chunk_ids": [
+        "llm_agent_course-0004-2ee05a8c888a"
+      ],
+      "child_ids": [
+        "llm_agent_course-0004-2ee05a8c888a"
+      ]
+    },
+    {
+      "node_id": "chapter-005-demo-sample-function-calling",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Function Calling",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Function Calling"
+      ],
+      "summary": "## Function Calling Function Calling 让大模型按照预定义 schema 选择并调用工具。模型不直接执行代码，而是输出函数名和参数；后端负责校验参数、执行函数并把结果返回给模型继续推理...",
+      "chunk_ids": [
+        "llm_agent_course-0005-9990131a015a"
+      ],
+      "child_ids": [
+        "llm_agent_course-0005-9990131a015a"
+      ]
+    },
+    {
+      "node_id": "chapter-006-demo-sample-agent",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Agent 与多智能体工作流",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Agent 与多智能体工作流"
+      ],
+      "summary": "## Agent 与多智能体工作流 Agent 是能根据目标规划步骤、调用工具、读取反馈并继续执行的智能模块。相比单轮问答，Agent 更强调状态、计划、工具使用和自我检查...",
+      "chunk_ids": [
+        "llm_agent_course-0006-979c957f2340"
+      ],
+      "child_ids": [
+        "llm_agent_course-0006-979c957f2340"
+      ]
+    },
+    {
+      "node_id": "chapter-007-demo-sample-langgraph",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "LangGraph 基础",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "LangGraph 基础"
+      ],
+      "summary": "## LangGraph 基础 LangGraph 是一种用于构建有状态 LLM 工作流的图式框架。它把应用表示为节点和边：节点执行具体逻辑，例如检索、生成或评估；边决定下一步走向，例如通过 Judge 后结束，不通过则回到生成节点修改...",
+      "chunk_ids": [
+        "llm_agent_course-0007-5f2e910ab3e5"
+      ],
+      "child_ids": [
+        "llm_agent_course-0007-5f2e910ab3e5"
+      ]
+    },
+    {
+      "node_id": "chapter-008-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "防幻觉与评估",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "防幻觉与评估"
+      ],
+      "summary": "## 防幻觉与评估 防幻觉的目标是减少模型生成没有依据、与课程资料冲突或超出能力边界的内容。常见方法包括强制引用检索片段、限制回答范围、使用 Judge Agent 打分、对关键事实做二次检索，以及在不确定时明确说明“不确定”。 评估可以分为检索评估和生成评估...",
+      "chunk_ids": [
+        "llm_agent_course-0008-45a4be89a1e3"
+      ],
+      "child_ids": [
+        "llm_agent_course-0008-45a4be89a1e3"
+      ]
+    },
+    {
+      "node_id": "chapter-009-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "大模型应用项目实践",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "大模型应用项目实践"
+      ],
+      "summary": "## 大模型应用项目实践 一个完整的大模型应用项目通常包括需求分析、数据准备、知识库构建、检索链路、工具调用、Agent 编排、前端交互、评估指标和部署监控。课程项目建议从一个小而闭环的场景开始，例如“课程答疑 + 个性化学习路径”...",
+      "chunk_ids": [
+        "llm_agent_course-0009-1f94495ca113"
+      ],
+      "child_ids": [
+        "llm_agent_course-0009-1f94495ca113"
+      ]
+    },
+    {
+      "node_id": "llm_agent_course-0001-6a410b9f16dd",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0001-6a410b9f16dd",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践"
+      ],
+      "summary": "# 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。",
+      "start_char": 0,
+      "end_char": 131
+    },
+    {
+      "node_id": "llm_agent_course-0002-50dcfc53f4c3",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0002-50dcfc53f4c3",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Prompt Engineering"
+      ],
+      "summary": "## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例...",
+      "start_char": 131,
+      "end_char": 468
+    },
+    {
+      "node_id": "llm_agent_course-0003-1d33ef76c4e0",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0003-1d33ef76c4e0",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Embedding 与向量检索"
+      ],
+      "summary": "## Embedding 与向量检索 Embedding 是把文本、代码或图片等对象映射为固定维度向量的过程。语义相近的内容在向量空间中距离更近，因此可以用相似度搜索找到与问题最相关的课程片段...",
+      "start_char": 468,
+      "end_char": 802
+    },
+    {
+      "node_id": "llm_agent_course-0004-2ee05a8c888a",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0004-2ee05a8c888a",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "RAG 检索增强生成"
+      ],
+      "summary": "## RAG 检索增强生成 RAG 是 Retrieval-Augmented Generation 的缩写，中文通常叫检索增强生成。它先从知识库中检索与用户问题相关的片段，再把这些片段作为上下文交给大模型生成答案。RAG 的核心价值是让回答更贴近课程资料，减少模型凭空编造...",
+      "start_char": 802,
+      "end_char": 1192
+    },
+    {
+      "node_id": "llm_agent_course-0005-9990131a015a",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0005-9990131a015a",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Function Calling"
+      ],
+      "summary": "## Function Calling Function Calling 让大模型按照预定义 schema 选择并调用工具。模型不直接执行代码，而是输出函数名和参数；后端负责校验参数、执行函数并把结果返回给模型继续推理...",
+      "start_char": 1192,
+      "end_char": 1501
+    },
+    {
+      "node_id": "llm_agent_course-0006-979c957f2340",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0006-979c957f2340",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Agent 与多智能体工作流"
+      ],
+      "summary": "## Agent 与多智能体工作流 Agent 是能根据目标规划步骤、调用工具、读取反馈并继续执行的智能模块。相比单轮问答，Agent 更强调状态、计划、工具使用和自我检查...",
+      "start_char": 1501,
+      "end_char": 1927
+    },
+    {
+      "node_id": "llm_agent_course-0007-5f2e910ab3e5",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0007-5f2e910ab3e5",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "LangGraph 基础"
+      ],
+      "summary": "## LangGraph 基础 LangGraph 是一种用于构建有状态 LLM 工作流的图式框架。它把应用表示为节点和边：节点执行具体逻辑，例如检索、生成或评估；边决定下一步走向，例如通过 Judge 后结束，不通过则回到生成节点修改...",
+      "start_char": 1927,
+      "end_char": 2295
+    },
+    {
+      "node_id": "llm_agent_course-0008-45a4be89a1e3",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0008-45a4be89a1e3",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "防幻觉与评估"
+      ],
+      "summary": "## 防幻觉与评估 防幻觉的目标是减少模型生成没有依据、与课程资料冲突或超出能力边界的内容。常见方法包括强制引用检索片段、限制回答范围、使用 Judge Agent 打分、对关键事实做二次检索，以及在不确定时明确说明“不确定”。 评估可以分为检索评估和生成评估...",
+      "start_char": 2295,
+      "end_char": 2597
+    },
+    {
+      "node_id": "llm_agent_course-0009-1f94495ca113",
+      "type": "chunk",
+      "chunk_id": "llm_agent_course-0009-1f94495ca113",
+      "source_file": "llm_agent_course.md",
+      "module_name": "Demo Sample",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "大模型应用项目实践"
+      ],
+      "summary": "## 大模型应用项目实践 一个完整的大模型应用项目通常包括需求分析、数据准备、知识库构建、检索链路、工具调用、Agent 编排、前端交互、评估指标和部署监控。课程项目建议从一个小而闭环的场景开始，例如“课程答疑 + 个性化学习路径”...",
+      "start_char": 2597,
+      "end_char": 2924
+    }
+  ],
+  "course_summary": {
+    "title": "LLM Agent Sample Course",
+    "summary": "Demo Sample: # 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。 ## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例.....",
+    "module_count": 1,
+    "chapter_count": 9,
+    "chunk_count": 9
+  },
+  "chapter_summaries": [
+    {
+      "node_id": "chapter-001-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "大模型应用开发与智能体实践",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践"
+      ],
+      "summary": "# 大模型应用开发与智能体实践 本课程面向已经具备基础编程能力的高校学生，目标是帮助学习者理解大模型应用从 Prompt 到 RAG、工具调用、智能体工作流、评估与项目落地的完整链路。课程强调工程实践：每一章都包含概念、关键术语、常见误区和可实现的小任务。",
+      "chunk_ids": [
+        "llm_agent_course-0001-6a410b9f16dd"
+      ],
+      "child_ids": [
+        "llm_agent_course-0001-6a410b9f16dd"
+      ]
+    },
+    {
+      "node_id": "chapter-002-demo-sample-prompt-engineering",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Prompt Engineering",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Prompt Engineering"
+      ],
+      "summary": "## Prompt Engineering Prompt Engineering 是设计输入指令、上下文和输出约束的过程。一个可维护的 Prompt 通常包含角色、任务、背景资料、输出格式、边界条件和示例...",
+      "chunk_ids": [
+        "llm_agent_course-0002-50dcfc53f4c3"
+      ],
+      "child_ids": [
+        "llm_agent_course-0002-50dcfc53f4c3"
+      ]
+    },
+    {
+      "node_id": "chapter-003-demo-sample-embedding",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Embedding 与向量检索",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Embedding 与向量检索"
+      ],
+      "summary": "## Embedding 与向量检索 Embedding 是把文本、代码或图片等对象映射为固定维度向量的过程。语义相近的内容在向量空间中距离更近，因此可以用相似度搜索找到与问题最相关的课程片段...",
+      "chunk_ids": [
+        "llm_agent_course-0003-1d33ef76c4e0"
+      ],
+      "child_ids": [
+        "llm_agent_course-0003-1d33ef76c4e0"
+      ]
+    },
+    {
+      "node_id": "chapter-004-demo-sample-rag",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "RAG 检索增强生成",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "RAG 检索增强生成"
+      ],
+      "summary": "## RAG 检索增强生成 RAG 是 Retrieval-Augmented Generation 的缩写，中文通常叫检索增强生成。它先从知识库中检索与用户问题相关的片段，再把这些片段作为上下文交给大模型生成答案。RAG 的核心价值是让回答更贴近课程资料，减少模型凭空编造...",
+      "chunk_ids": [
+        "llm_agent_course-0004-2ee05a8c888a"
+      ],
+      "child_ids": [
+        "llm_agent_course-0004-2ee05a8c888a"
+      ]
+    },
+    {
+      "node_id": "chapter-005-demo-sample-function-calling",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Function Calling",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Function Calling"
+      ],
+      "summary": "## Function Calling Function Calling 让大模型按照预定义 schema 选择并调用工具。模型不直接执行代码，而是输出函数名和参数；后端负责校验参数、执行函数并把结果返回给模型继续推理...",
+      "chunk_ids": [
+        "llm_agent_course-0005-9990131a015a"
+      ],
+      "child_ids": [
+        "llm_agent_course-0005-9990131a015a"
+      ]
+    },
+    {
+      "node_id": "chapter-006-demo-sample-agent",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "Agent 与多智能体工作流",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "Agent 与多智能体工作流"
+      ],
+      "summary": "## Agent 与多智能体工作流 Agent 是能根据目标规划步骤、调用工具、读取反馈并继续执行的智能模块。相比单轮问答，Agent 更强调状态、计划、工具使用和自我检查...",
+      "chunk_ids": [
+        "llm_agent_course-0006-979c957f2340"
+      ],
+      "child_ids": [
+        "llm_agent_course-0006-979c957f2340"
+      ]
+    },
+    {
+      "node_id": "chapter-007-demo-sample-langgraph",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "LangGraph 基础",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "LangGraph 基础"
+      ],
+      "summary": "## LangGraph 基础 LangGraph 是一种用于构建有状态 LLM 工作流的图式框架。它把应用表示为节点和边：节点执行具体逻辑，例如检索、生成或评估；边决定下一步走向，例如通过 Judge 后结束，不通过则回到生成节点修改...",
+      "chunk_ids": [
+        "llm_agent_course-0007-5f2e910ab3e5"
+      ],
+      "child_ids": [
+        "llm_agent_course-0007-5f2e910ab3e5"
+      ]
+    },
+    {
+      "node_id": "chapter-008-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "防幻觉与评估",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "防幻觉与评估"
+      ],
+      "summary": "## 防幻觉与评估 防幻觉的目标是减少模型生成没有依据、与课程资料冲突或超出能力边界的内容。常见方法包括强制引用检索片段、限制回答范围、使用 Judge Agent 打分、对关键事实做二次检索，以及在不确定时明确说明“不确定”。 评估可以分为检索评估和生成评估...",
+      "chunk_ids": [
+        "llm_agent_course-0008-45a4be89a1e3"
+      ],
+      "child_ids": [
+        "llm_agent_course-0008-45a4be89a1e3"
+      ]
+    },
+    {
+      "node_id": "chapter-009-demo-sample",
+      "type": "chapter",
+      "module_id": "module-001-demo-sample",
+      "module_name": "Demo Sample",
+      "title": "大模型应用项目实践",
+      "source_file": "llm_agent_course.md",
+      "heading_path": [
+        "大模型应用开发与智能体实践",
+        "大模型应用项目实践"
+      ],
+      "summary": "## 大模型应用项目实践 一个完整的大模型应用项目通常包括需求分析、数据准备、知识库构建、检索链路、工具调用、Agent 编排、前端交互、评估指标和部署监控。课程项目建议从一个小而闭环的场景开始，例如“课程答疑 + 个性化学习路径”...",
+      "chunk_ids": [
+        "llm_agent_course-0009-1f94495ca113"
+      ],
+      "child_ids": [
+        "llm_agent_course-0009-1f94495ca113"
+      ]
+    }
+  ]
+}

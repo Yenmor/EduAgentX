@@ -1,0 +1,18 @@
+[
+  {
+    "course_id": "llm-agent-practice-sample",
+    "course_name": "LLM Agent Sample Course",
+    "module_name": "Demo Sample",
+    "source_file": "llm_agent_course.md",
+    "title": "大模型应用开发与智能体实践",
+    "estimated_level": "intermediate",
+    "tags": [
+      "llm",
+      "rag",
+      "agent",
+      "langgraph",
+      "evaluation",
+      "sample"
+    ]
+  }
+]

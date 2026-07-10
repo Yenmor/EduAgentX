@@ -1,0 +1,19 @@
+{
+  "inputZip": "knowledge(1).zip",
+  "outputZip": "knowledge_eduagentx_course_catalog.zip",
+  "originalMarkdownFiles": 15,
+  "outputMarkdownFiles": 16,
+  "addedFiles": [
+    "course_catalog/catalog.json",
+    "courses/rag-retrieval-augmented-generation.md",
+    "README.md"
+  ],
+  "cleaningRules": [
+    "inject course front matter",
+    "inject course preface",
+    "demote original H1 headings",
+    "remove obvious placeholder headings",
+    "collapse excessive blank lines"
+  ],
+  "primaryDemoFocus": "RAG 检索增强生成 + RAG 与 LangChain 应用开发 + AI Agent 与多智能体系统"
+}
