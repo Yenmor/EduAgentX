@@ -76,6 +76,10 @@ const APP_VERSION = (() => {
 })();
 
 const nextConfig = {
+  // Allow local dev access through either localhost or 127.0.0.1. Without this,
+  // Next 16 blocks dev resources for 127.0.0.1 and client components never hydrate.
+  allowedDevOrigins: ["127.0.0.1"],
+
   // Expose the build-time version to the browser so the sidebar badge
   // can compare it against GitHub's latest release.
   env: {

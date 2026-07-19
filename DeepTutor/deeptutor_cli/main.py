@@ -28,7 +28,7 @@ configure_logging()
 
 app = typer.Typer(
     name="deeptutor",
-    help="DeepTutor CLI – agent-first interface for capabilities, tools, and knowledge.",
+    help="EduAgentX CLI – agent-first interface for capabilities, tools, and knowledge.",
     no_args_is_help=True,
     add_completion=False,
 )
@@ -130,7 +130,7 @@ def serve(
     port: int | None = typer.Option(None, help="Port number."),
     reload: bool = typer.Option(False, help="Enable auto-reload for development."),
 ) -> None:
-    """Start the DeepTutor API server."""
+    """Start the EduAgentX API server."""
     import asyncio
     import sys
 

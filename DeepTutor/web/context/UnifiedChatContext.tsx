@@ -223,6 +223,7 @@ type Action =
   | { type: "SET_SESSION_TITLE"; key: string; title: string }
   | { type: "DELETE_TURN"; key: string; messageId: number }
   | { type: "NEW_SESSION"; key: string }
+  | { type: "START_LOCAL_SESSION"; sessionId: string }
   | {
       type: "SET_SELECTED_BRANCH";
       key: string;
@@ -701,6 +702,38 @@ function reducer(state: ProviderState, action: Action): ProviderState {
       }
       return { ...state, selectedKey: action.key, sessions: nextSessions };
     }
+    case "START_LOCAL_SESSION": {
+      const existing = state.sessions[action.sessionId];
+      const selected =
+        state.selectedKey && state.selectedKey !== action.sessionId
+          ? state.sessions[state.selectedKey]
+          : null;
+      const session =
+        existing ?? createSessionEntry(action.sessionId, action.sessionId);
+      return {
+        ...state,
+        selectedKey: action.sessionId,
+        sessions: {
+          ...state.sessions,
+          [action.sessionId]: {
+            ...session,
+            key: action.sessionId,
+            sessionId: action.sessionId,
+            ...(!existing && selected
+              ? {
+                  enabledTools: selected.enabledTools,
+                  activeCapability: selected.activeCapability,
+                  knowledgeBases: selected.knowledgeBases,
+                  llmSelection: selected.llmSelection,
+                  personaSelection: selected.personaSelection,
+                  language: selected.language,
+                }
+              : {}),
+            updatedAt: Date.now(),
+          },
+        },
+      };
+    }
     default:
       return state;
   }
@@ -766,6 +799,7 @@ interface ChatContextValue {
   switchBranch: (parentMessageId: number | null, childId: number) => void;
   renameSessionTitle: (title: string) => Promise<void>;
   newSession: () => void;
+  startLocalSession: (sessionId: string) => void;
   loadSession: (sessionId: string, signal?: AbortSignal) => Promise<void>;
   selectedSessionId: string | null;
   sessionStatuses: Record<string, SessionStatusSnapshot>;
@@ -1701,6 +1735,10 @@ export function UnifiedChatProvider({
     dispatch({ type: "NEW_SESSION", key: makeDraftKey() });
   }, [makeDraftKey]);
 
+  const startLocalSession = useCallback((sessionId: string) => {
+    dispatch({ type: "START_LOCAL_SESSION", sessionId });
+  }, []);
+
   const editMessage = useCallback(
     async (messageId: number, newContent: string) => {
       const trimmed = newContent.trim();
@@ -1846,6 +1884,7 @@ export function UnifiedChatProvider({
       switchBranch,
       renameSessionTitle,
       newSession,
+      startLocalSession,
       loadSession,
       selectedSessionId: derivedState.sessionId,
       sessionStatuses,
@@ -1868,6 +1907,7 @@ export function UnifiedChatProvider({
       switchBranch,
       renameSessionTitle,
       newSession,
+      startLocalSession,
       loadSession,
       sessionStatuses,
       state.sidebarRefreshToken,

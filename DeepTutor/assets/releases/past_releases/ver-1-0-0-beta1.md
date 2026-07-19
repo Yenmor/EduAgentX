@@ -1,15 +1,15 @@
-# 🚀 DeepTutor v1.0.0-beta1 Release Notes
+# 🚀 EduAgentX v1.0.0-beta1 Release Notes
 
 **Release Date:** 2026.04.04
 
-We're thrilled to announce **DeepTutor v1.0.0-beta1** — the first beta of the **DeepTutor 2.0** architecture. This is a ground-up rewrite that transforms DeepTutor from a monolithic RAG tutor into an **agent-native learning platform** with a two-layer plugin model (Tools + Capabilities), three unified entry points (CLI / WebSocket / Python SDK), and a completely rebuilt web application shell.
+We're thrilled to announce **EduAgentX v1.0.0-beta1** — the first beta of the **EduAgentX 2.0** architecture. This is a ground-up rewrite that transforms EduAgentX from a monolithic RAG tutor into an **agent-native learning platform** with a two-layer plugin model (Tools + Capabilities), three unified entry points (CLI / WebSocket / Python SDK), and a completely rebuilt web application shell.
 
-> ⚠️ **Beta Notice:** This is **beta 1** of v1.0.0. The core architecture is stable, but some **UI interactions and edge-case workflows may still contain bugs**. We appreciate your patience and welcome bug reports via [Issues](https://github.com/HKUDS/DeepTutor/issues).
+> ⚠️ **Beta Notice:** This is **beta 1** of v1.0.0. The core architecture is stable, but some **UI interactions and edge-case workflows may still contain bugs**. We appreciate your patience and welcome bug reports via [Issues](https://github.com/HKUDS/EduAgentX/issues).
 
 > 📌 **Knowledge Base Note:** In this release, the RAG pipeline has been **simplified to LlamaIndex only**. LightRAG and RAG-Anything pipelines along with their related knowledge base content have been **temporarily removed** to focus on stability. They will be re-introduced in upcoming releases.
 
 > [!TIP]
-> **Call for Feedback:** If you encounter any bugs or have feature requests, please [open an issue](https://github.com/HKUDS/DeepTutor/issues)! PRs are welcome — see our [Contributing Guide](https://github.com/HKUDS/DeepTutor/blob/main/CONTRIBUTING.md).
+> **Call for Feedback:** If you encounter any bugs or have feature requests, please [open an issue](https://github.com/HKUDS/EduAgentX/issues)! PRs are welcome — see our [Contributing Guide](https://github.com/HKUDS/EduAgentX/blob/main/CONTRIBUTING.md).
 
 **Diff Scope:** `main...dev` (903 files changed, 92,701 insertions, 73,749 deletions)
 
@@ -75,7 +75,7 @@ Seven unified LLM-callable tools with bilingual prompt hints (en/zh):
 
 ### 🤖 TutorBot — Multi-Channel Bot Agent
 
-New autonomous bot system (`deeptutor/tutorbot/`) that brings DeepTutor to messaging platforms:
+New autonomous bot system (`deeptutor/tutorbot/`) that brings EduAgentX to messaging platforms:
 
 - **12 Channels:** Telegram, Discord, Slack, WeChat Work (WeCom), Feishu, DingTalk, WhatsApp, Matrix, QQ, Email, MoChat
 - **Agent Loop:** Tool-augmented LLM loop with memory, subagent spawning, and team collaboration
@@ -151,7 +151,7 @@ deeptutor/services/
 
 ## 📦 What's Changed
 
-- Complete codebase rewrite with agent-native architecture (DeepTutor 2.0).
+- Complete codebase rewrite with agent-native architecture (EduAgentX 2.0).
 - Two-layer plugin model (Tools + Capabilities) with `ChatOrchestrator` coordinator.
 - Standalone CLI package (`deeptutor_cli/`) with 11 sub-commands via Typer.
 - Unified WebSocket endpoint with turn lifecycle and session streaming.
@@ -163,4 +163,4 @@ deeptutor/services/
 - 53+ test files across runtime, services, agents, API, CLI, and tools.
 - Updated Docker configuration and layered dependency management.
 
-**Full Changelog**: https://github.com/HKUDS/DeepTutor/compare/v0.6.0...v1.0.0-beta1
+**Full Changelog**: https://github.com/HKUDS/EduAgentX/compare/v0.6.0...v1.0.0-beta1

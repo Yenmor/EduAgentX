@@ -30,7 +30,7 @@ Layer = Literal["L2", "L3"]
 
 _V1_FILES = ("PROFILE.md", "SUMMARY.md")
 _NO_MEMORY = (
-    "(No memory available — interact with DeepTutor and update from the Memory page to build one.)"
+    "(No memory available — interact with EduAgentX and update from the Memory page to build one.)"
 )
 
 

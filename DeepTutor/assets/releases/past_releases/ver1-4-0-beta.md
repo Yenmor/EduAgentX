@@ -1,4 +1,4 @@
-# DeepTutor v1.4.0-beta Release Notes
+# EduAgentX v1.4.0-beta Release Notes
 
 **Release Date:** 2026.05.21
 
@@ -289,4 +289,4 @@ and a self-subscribe feature (#480).
   Memory v2, settings split). Pin to `v1.4.0-beta` for production until
   the GA cut; bug reports against any of the new modules are welcome.
 
-**Full Changelog**: https://github.com/HKUDS/DeepTutor/compare/v1.3.10...v1.4.0-beta
+**Full Changelog**: https://github.com/HKUDS/EduAgentX/compare/v1.3.10...v1.4.0-beta

@@ -5,7 +5,7 @@ CLI Skill Commands
 Manage local skills and install packages from external hubs (EduHub, ClawHub, …).
 
 Hub references use ``<hub>:<slug>[@version]``; the hub prefix defaults to
-``eduhub`` (DeepTutor's native open skill registry). Installs run the full
+``eduhub`` (EduAgentX's native open skill registry). Installs run the full
 import gate: hub security verdict →
 safe extraction → frontmatter adaptation (``always`` stripped, flat
 ``bins``/``env`` folded into ``requires``) → provenance in ``.hub-lock.json``.
@@ -292,7 +292,7 @@ def register(app: typer.Typer) -> None:
             console.print("[bold red]格式预检未通过，请先修复：[/]")
             for err in pre.errors:
                 console.print(f"  [red]✗[/] {err}")
-            console.print("  [dim]格式规范见 https://eduhub.deeptutor.info/skill-format.md[/]")
+            console.print("  [dim]格式规范见 https://eduhub.eduagentx.local/skill-format.md[/]")
             raise typer.Exit(code=1)
         console.print(
             f"[green]✓[/] 格式预检通过 "

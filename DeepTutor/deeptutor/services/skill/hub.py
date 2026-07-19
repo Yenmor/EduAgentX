@@ -4,7 +4,7 @@ Skill hub providers
 
 Import skills from external registries ("hubs") into the local skill layer.
 
-A hub skill is the same artefact DeepTutor already speaks natively — a
+A hub skill is the same artefact EduAgentX already speaks natively — a
 directory with a ``SKILL.md`` (YAML frontmatter + markdown playbook) plus
 optional support files — so importing is a fetch + adapt + install pipeline,
 not a format translation:
@@ -62,11 +62,11 @@ from .service import SkillImportError, SkillInstallResult, SkillService
 
 logger = logging.getLogger(__name__)
 
-# DeepTutor ships pointing at EduHub, its native open skill registry: a bare
+# EduAgentX ships pointing at EduHub, its native open skill registry: a bare
 # ``install <slug>`` with no ``<hub>:`` prefix resolves here.
 DEFAULT_HUB = "eduhub"
 _CLAWHUB_BASE_URL = "https://clawhub.ai/api/v1"
-_EDUHUB_BASE_URL = "https://eduhub.deeptutor.info/api/v1"
+_EDUHUB_BASE_URL = "https://eduhub.eduagentx.local/api/v1"
 _HUBS_SETTINGS_FILE = "skill_hubs"
 
 # Hubs available out of the box, no settings file required. Both speak the
@@ -396,7 +396,7 @@ class ClawHubProvider:
         Uses ``/search`` when a query is given (server-side relevance) and the
         plain ``/skills`` explore feed otherwise. Rows carry display name,
         summary, version, download/star counts and owner — everything the
-        DeepTutor-native browser renders without a second round-trip.
+        EduAgentX-native browser renders without a second round-trip.
         """
         if query.strip():
             response = self._get("/search", q=query.strip(), limit=limit)

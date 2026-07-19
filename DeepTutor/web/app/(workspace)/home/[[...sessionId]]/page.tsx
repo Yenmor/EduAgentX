@@ -317,6 +317,7 @@ export default function ChatPage() {
   const router = useRouter();
   const { t } = useTranslation();
   const sessionIdParam = params.sessionId?.[0] ?? null;
+  const initialSessionIdParamRef = useRef(sessionIdParam);
   const { setActiveSessionId, language: appLanguage } = useAppShell();
 
   const {
@@ -334,6 +335,7 @@ export default function ChatPage() {
     editMessage,
     switchBranch,
     newSession,
+    startLocalSession,
     loadSession,
     renameSessionTitle,
   } = useUnifiedChat();
@@ -356,6 +358,37 @@ export default function ChatPage() {
   const [activeLLMDefault, setActiveLLMDefault] = useState<LLMSelection | null>(
     null,
   );
+  const isMasteryPathUrlRef = useRef(
+    typeof window !== "undefined" &&
+      new URLSearchParams(window.location.search).get("capability") ===
+        "mastery_path",
+  );
+  const masteryAutostartRef = useRef(false);
+  const shouldAutostartMasteryRef = useRef(
+    typeof window !== "undefined" &&
+      new URLSearchParams(window.location.search).get("autostart") === "1",
+  );
+
+  const refreshMasteryUrlFlags = useCallback(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    isMasteryPathUrlRef.current = params.get("capability") === "mastery_path";
+    shouldAutostartMasteryRef.current = params.get("autostart") === "1";
+    masteryAutostartRef.current = false;
+  }, []);
+
+  const applyMasteryUrlPreferences = useCallback(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("capability") !== "mastery_path") return;
+    const kbs = params.getAll("kb").map((kb) => kb.trim()).filter(Boolean);
+    setCapability("mastery_path");
+    if (kbs.length) setKBs(Array.from(new Set(kbs)));
+  }, [setCapability, setKBs]);
+
+  useEffect(() => {
+    refreshMasteryUrlFlags();
+  }, [refreshMasteryUrlFlags, sessionIdParam]);
   const [llmOptionsLoading, setLLMOptionsLoading] = useState(true);
   const [llmOptionsError, setLLMOptionsError] = useState(false);
   const [capabilityConfigs, setCapabilityConfigs] =
@@ -884,6 +917,7 @@ export default function ChatPage() {
    */
   const startSessionLoad = useCallback(
     (sid: string) => {
+      refreshMasteryUrlFlags();
       loadAbortRef.current?.abort();
       const ctrl = new AbortController();
       loadAbortRef.current = ctrl;
@@ -893,6 +927,7 @@ export default function ChatPage() {
         .then(() => {
           if (!ctrl.signal.aborted) {
             loadAbortRef.current = null;
+            if (isMasteryPathUrlRef.current) applyMasteryUrlPreferences();
             setSessionLoading(false);
           }
         })
@@ -900,11 +935,22 @@ export default function ChatPage() {
           if (!ctrl.signal.aborted) {
             loadAbortRef.current = null;
             setSessionLoading(false);
-            navigateToHome();
+            if (isMasteryPathUrlRef.current) {
+              startLocalSession(sid);
+              applyMasteryUrlPreferences();
+            } else {
+              navigateToHome();
+            }
           }
         });
     },
-    [loadSession, navigateToHome],
+    [
+      applyMasteryUrlPreferences,
+      loadSession,
+      navigateToHome,
+      refreshMasteryUrlFlags,
+      startLocalSession,
+    ],
   );
 
   // Initial mount — load the session from the URL.
@@ -1048,12 +1094,21 @@ export default function ChatPage() {
     const p = new URLSearchParams(window.location.search);
     const qc = p.get("capability");
     const qt = p.getAll("tool");
-    if (qc !== null) handleSelectCapability(qc || "");
-    else if (qt.length) {
+    const qk = p.getAll("kb").map((kb) => kb.trim()).filter(Boolean);
+    if (qc === "mastery_path" && qk.length) {
+      setCapability("mastery_path");
+      setKBs(Array.from(new Set(qk)));
+    } else if (qc === "mastery_path") {
+      setCapability("mastery_path");
+    } else if (qc !== null) {
+      handleSelectCapability(qc || "");
+    } else if (qt.length) {
       const valid = qt.filter((t): t is ToolName =>
         ALL_TOOLS.some((d) => d.name === t),
       );
       if (valid.length) setTools(Array.from(new Set(valid)));
+    } else if (qk.length) {
+      setKBs(Array.from(new Set(qk)));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -1452,7 +1507,7 @@ export default function ChatPage() {
         config = buildResearchWSConfig(researchConfig);
       }
       // When a connected agent is selected, carry the per-turn consult budget
-      // (how many times DeepTutor may ask it) so the subagent capability uses it.
+      // (how many times EduAgentX may ask it) so the subagent capability uses it.
       if (selectedAgent && subagentBudget) {
         config = { ...(config ?? {}), subagent_consult_budget: subagentBudget };
       }
@@ -1521,6 +1576,24 @@ export default function ChatPage() {
       visualizeConfig,
     ],
   );
+
+  useEffect(() => {
+    if (!shouldAutostartMasteryRef.current || masteryAutostartRef.current) return;
+    if (!sessionIdParam || state.sessionId !== sessionIdParam) return;
+    if (state.activeCapability !== "mastery_path") return;
+    if (state.messages.length || state.isStreaming || sessionLoading) return;
+    masteryAutostartRef.current = true;
+    void handleSend(t("开始学习。请根据我的精通之路从当前目标开始。"));
+  }, [
+    handleSend,
+    sessionIdParam,
+    sessionLoading,
+    state.activeCapability,
+    state.isStreaming,
+    state.messages.length,
+    state.sessionId,
+    t,
+  ]);
 
   const handleConfirmOutline = useCallback(
     (
@@ -1632,7 +1705,7 @@ export default function ChatPage() {
     agentPreselectDoneRef.current = true;
     handleSelectAgent(name);
   }, [agentNameSet, handleSelectAgent]);
-  // How many times DeepTutor may consult the selected agent this turn. Seeded
+  // How many times EduAgentX may consult the selected agent this turn. Seeded
   // from the configured default; the composer's stepper overrides it per turn
   // (sent in the request config, read by the subagent capability).
   const [subagentBudget, setSubagentBudget] = useState<number | null>(null);
@@ -1859,8 +1932,8 @@ export default function ChatPage() {
               <div className="flex flex-1 min-h-0 flex-col items-center justify-end pb-14 animate-fade-in">
                 <div className="flex items-center justify-center gap-4">
                   <img
-                    src="/logo_black.png"
-                    alt="DeepTutor"
+                    src="/eduagentx-mark.svg"
+                    alt="EduAgentX"
                     width={40}
                     height={40}
                     className="h-10 w-10 select-none"
@@ -2117,7 +2190,7 @@ function SubagentTabWatcher({
   viewerPanelRef: React.MutableRefObject<SessionViewerPanelHandle | null>;
 }) {
   useEffect(() => {
-    // Group by turn so all of one turn's consults (DeepTutor may ask the agent
+    // Group by turn so all of one turn's consults (EduAgentX may ask the agent
     // several questions in a row, each its own tool call) land in one tab as a
     // single running dialogue; fall back to the call id when no turn is set.
     const groups = new Map<string, { label: string; events: StreamEvent[] }>();

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useAppShell } from "@/context/AppShellContext";
 import {
   BookOpen,
@@ -11,6 +11,7 @@ import {
   Bot,
   Brain,
   ChevronDown,
+  GraduationCap,
   Github,
   HeartHandshake,
   House,
@@ -21,6 +22,7 @@ import {
   PanelLeftOpen,
   PenLine,
   Settings,
+  SlidersHorizontal,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -30,6 +32,7 @@ import type { SessionSummary } from "@/lib/session-api";
 import { Tooltip } from "@/components/ui/Tooltip";
 import { useCapabilityAccess } from "@/components/access/CapabilityAccessContext";
 import type { Capability } from "@/lib/capability-routes";
+import { useUiMode, type UiMode } from "@/lib/ui-mode";
 
 interface NavEntry {
   href: string;
@@ -38,9 +41,18 @@ interface NavEntry {
   tooltipKey?: string;
   /** Model capability this feature needs; locked when the user lacks it. */
   requires?: Capability;
+  /** Whether this entry stays visible in the simplified student shell. */
+  studentVisible?: boolean;
 }
 
 const PRIMARY_NAV: NavEntry[] = [
+  {
+    href: "/courses",
+    label: "Courses",
+    icon: GraduationCap,
+    tooltipKey: "Course selection",
+    studentVisible: true,
+  },
   {
     href: "/home",
     label: "Home",
@@ -84,6 +96,7 @@ const PRIMARY_NAV: NavEntry[] = [
     label: "Learning Space",
     icon: LayoutGrid,
     tooltipKey: "Space tooltip",
+    studentVisible: true,
   },
 ];
 
@@ -108,9 +121,13 @@ const SECONDARY_NAV: NavEntry[] = [
   },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
-const GITHUB_REPO_URL = "https://github.com/HKUDS/DeepTutor";
-const DOCS_URL = "https://deeptutor.info/";
+const GITHUB_REPO_URL = "https://github.com/HKUDS/EduAgentX";
+const DOCS_URL = "https://eduagentx.local/";
 const RECENTS_COLLAPSED_KEY = "deeptutor.sidebar.recentsCollapsed";
+
+function modeLabel(mode: UiMode) {
+  return mode === "student" ? "学生模式" : "备课模式";
+}
 
 interface SidebarShellProps {
   sessions?: SessionSummary[];
@@ -145,9 +162,24 @@ export function SidebarShell({
   const router = useRouter();
   const { t } = useTranslation();
   const { has } = useCapabilityAccess();
+  const { mode, setMode } = useUiMode();
   const { sidebarCollapsed: collapsed, setSidebarCollapsed: setCollapsed } =
     useAppShell();
 
+  const visiblePrimaryNav = useMemo(
+    () =>
+      mode === "student"
+        ? PRIMARY_NAV.filter((item) => item.studentVisible)
+        : PRIMARY_NAV,
+    [mode],
+  );
+  const visibleSecondaryNav = useMemo(
+    () =>
+      mode === "student"
+        ? SECONDARY_NAV.filter((item) => item.studentVisible)
+        : SECONDARY_NAV,
+    [mode],
+  );
   const navLocked = (item: NavEntry) =>
     item.requires ? !has(item.requires) : false;
   const lockedTooltip = t("Locked — contact your administrator to get access.");
@@ -174,6 +206,10 @@ export function SidebarShell({
     });
   };
 
+  const toggleMode = () => {
+    setMode(mode === "student" ? "author" : "student");
+  };
+
   const handleHomeClick = (event: React.MouseEvent) => {
     // Always reset to a fresh session (mirrors the old "New Chat" affordance);
     // let modifier-clicks fall through to default Link behavior so middle-click
@@ -193,12 +229,12 @@ export function SidebarShell({
         <div className="relative mb-2 flex h-9 w-9 items-center justify-center">
           <Link
             href="/"
-            aria-label="DeepTutor"
+            aria-label="EduAgentX"
             className="flex items-center justify-center transition-opacity duration-150 group-hover/sb:opacity-0"
           >
             <Image
-              src="/logo.png"
-              alt="DeepTutor"
+              src="/eduagentx-mark.svg"
+              alt="EduAgentX"
               width={22}
               height={22}
               className="h-[22px] w-[22px] rounded-md"
@@ -215,7 +251,7 @@ export function SidebarShell({
 
         {/* Primary nav */}
         <nav className="mt-1 flex w-full flex-col items-center gap-1 px-1.5">
-          {PRIMARY_NAV.map((item) => {
+          {visiblePrimaryNav.map((item) => {
             const active = pathname.startsWith(item.href);
             const locked = navLocked(item);
             const description = locked
@@ -275,7 +311,7 @@ export function SidebarShell({
         {/* Secondary nav + footer */}
         <div className="flex w-full flex-col items-center gap-1 px-1.5">
           <div className="my-1 h-px w-7 bg-[var(--border)]/40" />
-          {SECONDARY_NAV.map((item) => {
+          {visibleSecondaryNav.map((item) => {
             const active = pathname.startsWith(item.href);
             return (
               <Link
@@ -293,6 +329,22 @@ export function SidebarShell({
             );
           })}
           {renderedFooter}
+          <Tooltip
+            label={modeLabel(mode)}
+            description={mode === "student" ? "切换到备课模式" : "切换到学生模式"}
+            side="right"
+          >
+            <button
+              type="button"
+              onClick={toggleMode}
+              aria-label={modeLabel(mode)}
+              className="flex h-9 w-9 items-center justify-center rounded-xl text-[var(--muted-foreground)]/70 transition-colors hover:bg-[var(--background)]/50 hover:text-[var(--foreground)]"
+            >
+              <SlidersHorizontal size={15} strokeWidth={1.6} />
+            </button>
+          </Tooltip>
+          {mode === "author" ? (
+            <>
           <a
             href={DOCS_URL}
             target="_blank"
@@ -313,6 +365,8 @@ export function SidebarShell({
           >
             <Github size={15} strokeWidth={1.6} />
           </a>
+            </>
+          ) : null}
           <VersionBadge collapsed />
         </div>
       </aside>
@@ -326,15 +380,15 @@ export function SidebarShell({
       <div className="flex h-14 items-center justify-between px-4">
         <Link href="/" className="group flex items-center gap-1.5">
           <Image
-            src="/logo.png"
-            alt="DeepTutor"
+            src="/eduagentx-mark.svg"
+            alt="EduAgentX"
             width={22}
             height={22}
             className="h-[22px] w-[22px] transition-transform duration-200 group-hover:scale-105"
           />
           <Image
-            src="/banner.png"
-            alt="DeepTutor"
+            src="/eduagentx-banner.svg"
+            alt="EduAgentX"
             width={897}
             height={236}
             priority
@@ -353,7 +407,7 @@ export function SidebarShell({
       {/* Primary nav */}
       <nav className="px-2 pt-1">
         <div className="space-y-px">
-          {PRIMARY_NAV.map((item) => {
+          {visiblePrimaryNav.map((item) => {
             const active = pathname.startsWith(item.href);
             const locked = navLocked(item);
             if (locked) {
@@ -449,7 +503,7 @@ export function SidebarShell({
 
       {/* Secondary nav + footer */}
       <div className="border-t border-[var(--border)]/40 px-2 py-2">
-        {SECONDARY_NAV.map((item) => {
+        {visibleSecondaryNav.map((item) => {
           const active = pathname.startsWith(item.href);
           return (
             <Link
@@ -467,6 +521,15 @@ export function SidebarShell({
           );
         })}
         {renderedFooter}
+        <button
+          type="button"
+          onClick={toggleMode}
+          className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-[13.5px] text-[var(--foreground)]/85 transition-colors hover:bg-[var(--background)]/60 hover:text-[var(--foreground)]"
+        >
+          <SlidersHorizontal size={16} strokeWidth={1.5} />
+          <span>{modeLabel(mode)}</span>
+        </button>
+        {mode === "author" ? (
         <div className="mt-0.5 flex items-center gap-0.5">
           <VersionBadge />
           <a
@@ -490,6 +553,11 @@ export function SidebarShell({
             <Github size={13} strokeWidth={1.7} />
           </a>
         </div>
+        ) : (
+          <div className="mt-1">
+            <VersionBadge />
+          </div>
+        )}
       </div>
     </aside>
   );

@@ -2,7 +2,7 @@
 LLM Service
 ===========
 
-Unified LLM service for all DeepTutor modules.
+Unified LLM service for all EduAgentX modules.
 
 Architecture:
     Agents (ChatAgent, SolveAgent, etc.)

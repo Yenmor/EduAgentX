@@ -1718,17 +1718,22 @@ class TurnRuntimeManager:
                     events=assistant_events,
                     attachments=generated_attachments or None,
                 )
-            await self._flush_buffered_events(execution)
-            await self.store.update_turn_status(turn_id, "completed")
             if pending_done_event is None:
                 pending_done_event = StreamEvent(
                     type=StreamEventType.DONE,
                     source=capability_name,
                     metadata={"status": "completed"},
                 )
+            turn_status = str(
+                (pending_done_event.metadata or {}).get("status") or "completed"
+            )
+            if turn_status not in {"completed", "failed", "cancelled", "rejected"}:
+                turn_status = "completed"
+            await self._flush_buffered_events(execution)
+            await self.store.update_turn_status(turn_id, turn_status)
             await self._publish_live_event(execution, pending_done_event)
             stream_done_sent = True
-            if not is_regenerate:
+            if turn_status == "completed" and not is_regenerate:
                 # Title generation is post-turn metadata. Keep it after DONE
                 # so the composer and duration clock stop as soon as the
                 # assistant answer is saved; the frontend keeps this socket

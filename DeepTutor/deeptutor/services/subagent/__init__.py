@@ -1,6 +1,6 @@
 """Subagent driver layer — drive a user's local agent CLI as a subagent.
 
-DeepTutor runs on the same machine as the user's configured Claude Code / Codex,
+EduAgentX runs on the same machine as the user's configured Claude Code / Codex,
 so the backend can spawn those CLIs directly and stream back every native event.
 This package is the decoupled core of that: backends that know one CLI each, a
 shared streaming-subprocess primitive, and the value types that cross into the

@@ -1,7 +1,7 @@
 # ============================================
-# DeepTutor Docker Compose — Pre-built GHCR Image
+# EduAgentX Docker Compose — Pre-built GHCR Image
 # ============================================
-# Run DeepTutor using the official pre-built image from GitHub Container Registry.
+# Run EduAgentX using the official pre-built image from GitHub Container Registry.
 # No local build required — the image is pulled automatically.
 #
 # Usage:

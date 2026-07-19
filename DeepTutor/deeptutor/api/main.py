@@ -217,13 +217,13 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="DeepTutor API",
+    title="EduAgentX API",
     version="1.0.0",
     lifespan=lifespan,
     # Disable automatic trailing slash redirects to prevent protocol downgrade issues
     # when deployed behind HTTPS reverse proxies (e.g., nginx).
     # Without this, FastAPI's 307 redirects may change HTTPS to HTTP.
-    # See: https://github.com/HKUDS/DeepTutor/issues/112
+    # See: https://github.com/HKUDS/EduAgentX/issues/112
     redirect_slashes=False,
 )
 
@@ -312,6 +312,7 @@ from deeptutor.api.routers import (
     capabilities_settings,
     chat,
     co_writer,
+    course_shell,
     dashboard,
     imports,
     knowledge,
@@ -373,6 +374,12 @@ app.include_router(
     mastery_path.router,
     prefix="/api/v1/learning",
     tags=["mastery-path"],
+    dependencies=_auth,
+)
+app.include_router(
+    course_shell.router,
+    prefix="/api/v1/course",
+    tags=["course-shell"],
     dependencies=_auth,
 )
 app.include_router(
@@ -444,7 +451,7 @@ app.include_router(quiz_judge.router, prefix="/api/v1", tags=["quiz-judge"])
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to DeepTutor API"}
+    return {"message": "Welcome to EduAgentX API"}
 
 
 if __name__ == "__main__":

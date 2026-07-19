@@ -49,8 +49,8 @@ _ALLOWED_MSG_KEYS = frozenset(
 _ALNUM = string.ascii_letters + string.digits
 
 _DEFAULT_OPENROUTER_HEADERS = {
-    "HTTP-Referer": "https://github.com/HKUDS/DeepTutor",
-    "X-OpenRouter-Title": "DeepTutor",
+    "HTTP-Referer": "https://github.com/HKUDS/EduAgentX",
+    "X-OpenRouter-Title": "EduAgentX",
 }
 _RESPONSES_FAILURE_THRESHOLD = 2
 _RESPONSES_PROBE_INTERVAL_S = 300.0

@@ -72,14 +72,28 @@ class ChatOrchestrator:
         if _turn_id:
             register_bus(_turn_id, bus)
 
+        failed = False
+
         async def _run() -> None:
+            nonlocal failed
             try:
                 await capability.run(context, bus)
             except Exception as exc:
+                failed = True
                 logger.error("Capability %s failed: %s", cap_name, exc, exc_info=True)
-                await bus.error(str(exc), source=cap_name)
+                await bus.error(
+                    str(exc),
+                    source=cap_name,
+                    metadata={"turn_terminal": True, "status": "failed"},
+                )
             finally:
-                await bus.emit(StreamEvent(type=StreamEventType.DONE, source=cap_name))
+                await bus.emit(
+                    StreamEvent(
+                        type=StreamEventType.DONE,
+                        source=cap_name,
+                        metadata={"status": "failed" if failed else "completed"},
+                    )
+                )
                 await bus.close()
                 if _turn_id:
                     unregister_bus(_turn_id)

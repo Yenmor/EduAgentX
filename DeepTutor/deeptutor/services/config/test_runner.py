@@ -329,8 +329,8 @@ class ConfigTestRunner:
         )
         client = EmbeddingClient(config)
         probe_texts = [
-            "DeepTutor embedding smoke test",
-            "DeepTutor retrieval batch probe",
+            "EduAgentX embedding smoke test",
+            "EduAgentX retrieval batch probe",
         ]
         vectors = await client.embed(probe_texts)
         if len(vectors) != len(probe_texts):
@@ -437,8 +437,8 @@ class ConfigTestRunner:
         run.emit("info", f"Resolved search provider `{provider}`.")
         if resolved.fallback_reason:
             run.emit("warning", resolved.fallback_reason)
-        run.emit("info", "Running search query: DeepTutor configuration health check")
-        result = web_search("DeepTutor configuration health check", provider=provider)
+        run.emit("info", "Running search query: EduAgentX configuration health check")
+        result = web_search("EduAgentX configuration health check", provider=provider)
         run.emit(
             "response",
             "Search result received.",
@@ -463,7 +463,7 @@ class ConfigTestRunner:
             f"voice `{resolved.voice or '(default)'}`).",
         )
         run.emit("info", f"Request target: {resolved.base_url}")
-        sample = "DeepTutor voice check. 这是一段语音合成测试。"
+        sample = "EduAgentX voice check. 这是一段语音合成测试。"
         run.emit("info", "Synthesizing a short sample clip.")
         audio, content_type = await synthesize_speech(sample, catalog=catalog)
         run.emit(

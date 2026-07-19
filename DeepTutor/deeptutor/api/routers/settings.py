@@ -1087,7 +1087,7 @@ async def complete_tour(payload: TourCompletePayload | None = None):
 
     return {
         "status": "completed",
-        "message": "Configuration saved. DeepTutor will restart shortly.",
+        "message": "Configuration saved. EduAgentX will restart shortly.",
         "launch_at": launch_at,
         "redirect_at": redirect_at,
         "runtime": applied,

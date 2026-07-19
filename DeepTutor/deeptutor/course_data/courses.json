@@ -1,0 +1,199 @@
+[
+  {
+    "id": "gaodengshuxue",
+    "title": "高等数学",
+    "summary": "面向大学一年级高等数学学习，从极限、连续、导数到积分与级数，按掌握程度逐步推进。",
+    "difficulty": "大学基础",
+    "duration": "6-8 周",
+    "kb_name": "gaodengshuxue",
+    "template_book_id": "template_gaodengshuxue",
+    "outcomes": [
+      "建立极限、连续、导数、积分之间的结构化理解",
+      "掌握典型计算题的步骤与常见易错点",
+      "能把导数、积分和级数方法用于综合题"
+    ],
+    "optional_module_ids": ["math_series", "math_applications"],
+    "template_modules": [
+      {
+        "id": "math_limits",
+        "name": "函数、极限与连续",
+        "order": 0,
+        "pass_threshold": 0.7,
+        "knowledge_points": [
+          {
+            "id": "math_limits_kp0",
+            "name": "函数性质与常见初等函数",
+            "type": "memory",
+            "module_id": "math_limits"
+          },
+          {
+            "id": "math_limits_kp1",
+            "name": "数列极限与函数极限的概念",
+            "type": "concept",
+            "module_id": "math_limits"
+          },
+          {
+            "id": "math_limits_kp2",
+            "name": "无穷小、等价无穷小与极限计算",
+            "type": "procedure",
+            "module_id": "math_limits"
+          },
+          {
+            "id": "math_limits_kp3",
+            "name": "连续性与间断点分类",
+            "type": "concept",
+            "module_id": "math_limits"
+          }
+        ]
+      },
+      {
+        "id": "math_derivatives",
+        "name": "导数与微分",
+        "order": 1,
+        "pass_threshold": 0.7,
+        "knowledge_points": [
+          {
+            "id": "math_derivatives_kp0",
+            "name": "导数定义与几何意义",
+            "type": "concept",
+            "module_id": "math_derivatives"
+          },
+          {
+            "id": "math_derivatives_kp1",
+            "name": "求导法则与复合函数求导",
+            "type": "procedure",
+            "module_id": "math_derivatives"
+          },
+          {
+            "id": "math_derivatives_kp2",
+            "name": "隐函数与参数方程求导",
+            "type": "procedure",
+            "module_id": "math_derivatives"
+          },
+          {
+            "id": "math_derivatives_kp3",
+            "name": "微分及其近似计算",
+            "type": "procedure",
+            "module_id": "math_derivatives"
+          }
+        ]
+      },
+      {
+        "id": "math_derivative_applications",
+        "name": "中值定理与导数应用",
+        "order": 2,
+        "pass_threshold": 0.7,
+        "knowledge_points": [
+          {
+            "id": "math_derivative_applications_kp0",
+            "name": "罗尔定理、拉格朗日中值定理与柯西中值定理",
+            "type": "concept",
+            "module_id": "math_derivative_applications"
+          },
+          {
+            "id": "math_derivative_applications_kp1",
+            "name": "洛必达法则",
+            "type": "procedure",
+            "module_id": "math_derivative_applications"
+          },
+          {
+            "id": "math_derivative_applications_kp2",
+            "name": "单调性、极值与最值",
+            "type": "procedure",
+            "module_id": "math_derivative_applications"
+          },
+          {
+            "id": "math_derivative_applications_kp3",
+            "name": "凹凸性、拐点与函数作图",
+            "type": "procedure",
+            "module_id": "math_derivative_applications"
+          }
+        ]
+      },
+      {
+        "id": "math_integrals",
+        "name": "不定积分与定积分",
+        "order": 3,
+        "pass_threshold": 0.7,
+        "knowledge_points": [
+          {
+            "id": "math_integrals_kp0",
+            "name": "原函数与不定积分",
+            "type": "concept",
+            "module_id": "math_integrals"
+          },
+          {
+            "id": "math_integrals_kp1",
+            "name": "换元积分法与分部积分法",
+            "type": "procedure",
+            "module_id": "math_integrals"
+          },
+          {
+            "id": "math_integrals_kp2",
+            "name": "定积分定义、性质与牛顿-莱布尼茨公式",
+            "type": "concept",
+            "module_id": "math_integrals"
+          },
+          {
+            "id": "math_integrals_kp3",
+            "name": "反常积分初步",
+            "type": "procedure",
+            "module_id": "math_integrals"
+          }
+        ]
+      },
+      {
+        "id": "math_applications",
+        "name": "积分应用",
+        "order": 4,
+        "pass_threshold": 0.7,
+        "knowledge_points": [
+          {
+            "id": "math_applications_kp0",
+            "name": "平面图形面积",
+            "type": "procedure",
+            "module_id": "math_applications"
+          },
+          {
+            "id": "math_applications_kp1",
+            "name": "旋转体体积",
+            "type": "procedure",
+            "module_id": "math_applications"
+          },
+          {
+            "id": "math_applications_kp2",
+            "name": "物理应用中的积分建模",
+            "type": "design",
+            "module_id": "math_applications"
+          }
+        ]
+      },
+      {
+        "id": "math_series",
+        "name": "无穷级数",
+        "order": 5,
+        "pass_threshold": 0.7,
+        "knowledge_points": [
+          {
+            "id": "math_series_kp0",
+            "name": "数项级数及敛散性判别",
+            "type": "concept",
+            "module_id": "math_series"
+          },
+          {
+            "id": "math_series_kp1",
+            "name": "幂级数与收敛半径",
+            "type": "procedure",
+            "module_id": "math_series"
+          },
+          {
+            "id": "math_series_kp2",
+            "name": "泰勒公式与函数展开",
+            "type": "procedure",
+            "module_id": "math_series"
+          }
+        ]
+      }
+    ]
+  }
+]

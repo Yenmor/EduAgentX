@@ -9,7 +9,7 @@ SDK because the calls we need map 1:1 onto our per-KB pipeline contract:
 * ``GET  /retrieval/{id}/``     — poll for the retrieved nodes
 * ``DELETE /doc/{doc_id}/``     — best-effort cloud cleanup
 
-Retrieval-only (not chat-completions) keeps generation on DeepTutor's own LLM
+Retrieval-only (not chat-completions) keeps generation on EduAgentX's own LLM
 ("Option A"). The client keeps the dependency surface to ``httpx`` (already a
 dependency) and is trivially mockable: inject an ``httpx`` transport or swap the
 whole client out via ``PageIndexPipeline(client=...)`` in tests.

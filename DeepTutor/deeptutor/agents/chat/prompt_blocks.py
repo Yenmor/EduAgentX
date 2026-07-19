@@ -97,7 +97,7 @@ class ChatPromptAssembler:
 
         Partner turns carry ``metadata["agent_identity"]`` (user-given name +
         description); their identity comes from that and the Soul block, so
-        the "You are DeepTutor" general is swapped for ``general_partner``.
+        the "You are EduAgentX" general is swapped for ``general_partner``.
         Chat turns carry no identity and render the general block unchanged.
         """
         identity = context.metadata.get("agent_identity")

@@ -3,7 +3,7 @@
 Implements the same contract as :class:`LlamaIndexPipeline` (see
 ``..base.RAGPipeline``) but delegates indexing and retrieval to the hosted
 PageIndex service. Documents are uploaded for tree building; retrieval is
-doc-scoped and reasoning-based (no embeddings). DeepTutor's own chat LLM still
+doc-scoped and reasoning-based (no embeddings). EduAgentX's own chat LLM still
 writes the final answer from the returned context.
 """
 

@@ -1,8 +1,8 @@
 const FENCE = "```";
 
-export const CO_WRITER_SAMPLE_TEMPLATE = `# DeepTutor Co-Writer
+export const CO_WRITER_SAMPLE_TEMPLATE = `# EduAgentX Co-Writer
 
-> DeepTutor's built-in writing canvas for notes, reports, tutorials, and AI-assisted drafts.
+> EduAgentX's built-in writing canvas for notes, reports, tutorials, and AI-assisted drafts.
 
 ### Features
 
@@ -10,14 +10,14 @@ export const CO_WRITER_SAMPLE_TEMPLATE = `# DeepTutor Co-Writer
 - Real-time preview for headings, tables, code, math, flowchart, and sequence diagrams
 - AI editing workflows for rewrite, shorten, and expand
 - HTML tag decoding for tags like <sub>, <sup>, <abbr>, and <mark>
-- A practical starter draft for DeepTutor product docs and learning content
+- A practical starter draft for EduAgentX product docs and learning content
 
 ## Headers (Underline)
 
-DeepTutor Learning Note
+EduAgentX Learning Note
 =============
 
-DeepTutor Study Outline
+EduAgentX Study Outline
 -------------
 
 ### Characters
@@ -33,37 +33,37 @@ Superscript: X<sup>2</sup>, Subscript: O<sub>2</sub>
 
 **Abbreviation(link HTML abbr tag)**
 
-The <abbr title="Large Language Model">LLM</abbr> layer powers DeepTutor while the <abbr title="Retrieval Augmented Generation">RAG</abbr> layer provides grounded knowledge support.
+The <abbr title="Large Language Model">LLM</abbr> layer powers EduAgentX while the <abbr title="Retrieval Augmented Generation">RAG</abbr> layer provides grounded knowledge support.
 
 ### Blockquotes
 
-> DeepTutor helps students turn questions into structured understanding.
+> EduAgentX helps students turn questions into structured understanding.
 >
-> "Learn deeply, write clearly.", [DeepTutor](#deeptutor-co-writer)
+> "Learn deeply, write clearly.", [EduAgentX](#eduagentx-co-writer)
 
 ### Links
 
-[DeepTutor Co-Writer](#deeptutor-co-writer "co-writer section")
+[EduAgentX Co-Writer](#eduagentx-co-writer "co-writer section")
 
-[DeepTutor Learning Note](#deeptutor-learning-note)
+[EduAgentX Learning Note](#eduagentx-learning-note)
 
-[DeepTutor Website](https://deeptutor.info)
+[EduAgentX Website](https://eduagentx.local)
 
-[Reference link][deeptutor-doc]
+[Reference link][eduagentx-doc]
 
-[deeptutor-doc]: #deeptutor-learning-note
+[eduagentx-doc]: #eduagentx-learning-note
 
 ### Code Blocks
 
 #### Inline code
 
-\`deeptutor chat --once "Summarize this section"\`
+\`eduagentx chat --once "Summarize this section"\`
 
 #### Code Blocks (Indented style)
 
     from deeptutor.runtime.orchestrator import ChatOrchestrator
     orchestrator = ChatOrchestrator()
-    print("DeepTutor is ready.")
+    print("EduAgentX is ready.")
 
 #### Python
 
@@ -86,7 +86,7 @@ ${FENCE}
 
 ${FENCE}json
 {
-  "app_name": "DeepTutor",
+  "app_name": "EduAgentX",
   "default_capability": "chat",
   "enabled_tools": ["rag", "web_search", "code_execution", "reason"],
   "ui": {
@@ -98,8 +98,8 @@ ${FENCE}
 #### HTML code
 
 ${FENCE}html
-<section class="deeptutor-card">
-  <h1>DeepTutor</h1>
+<section class="eduagentx-card">
+  <h1>EduAgentX</h1>
   <p>Write, revise, and organize learning content with AI.</p>
 </section>
 ${FENCE}
@@ -108,13 +108,13 @@ ${FENCE}
 
 ![](/logo-ver2.png)
 
-> DeepTutor brand mark used inside the co-writer template.
+> EduAgentX brand mark used inside the co-writer template.
 
 ### Lists
 
-- DeepTutor Chat
-- DeepTutor Co-Writer
-- DeepTutor Research
+- EduAgentX Chat
+- EduAgentX Co-Writer
+- EduAgentX Research
 
 1. Draft a concept note
 2. Ask AI to refine it
@@ -136,7 +136,7 @@ Research      | Build structured multi-step reports
 
 ### Markdown extras
 
-- [x] Draft a DeepTutor product note
+- [x] Draft a EduAgentX product note
 - [x] Add references and structure
 - [ ] Polish the final explanation
   - [ ] Check headings
@@ -156,7 +156,7 @@ $$ \\sin(\\alpha)^{\\theta}=\\sum_{i=0}^{n}(x^i + \\cos(f))$$
 
 ${FENCE}flow
 st=>start: Student asks a question
-op=>operation: DeepTutor analyzes intent
+op=>operation: EduAgentX analyzes intent
 cond=>condition: Need deep workflow?
 chat=>operation: Answer with chat capability
 solve=>operation: Route to deep solve
@@ -172,11 +172,11 @@ ${FENCE}
 ### Sequence Diagram
 
 ${FENCE}seq
-Student->DeepTutor: Ask for help
-DeepTutor->KnowledgeBase: Load context
-Note right of DeepTutor: Collect memory\\nand relevant knowledge
-DeepTutor-->Student: Return guided response
-Student->>DeepTutor: Request rewrite in co-writer
+Student->EduAgentX: Ask for help
+EduAgentX->KnowledgeBase: Load context
+Note right of EduAgentX: Collect memory\\nand relevant knowledge
+EduAgentX-->Student: Return guided response
+Student->>EduAgentX: Request rewrite in co-writer
 ${FENCE}
 
 ### End
